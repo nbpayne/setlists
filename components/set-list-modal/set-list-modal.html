@@ -1,0 +1,18 @@
+            
+              <h2>Edit Set List</h2>
+              <p class="lead">When and where is this gig?</p>
+              <form ng-submit="save()">
+                <div class="row">
+                  <label>Venue</label>
+                  <input type="text" placeholder="Enter venue" required ng-model="setList.data.venue" />
+                </div>
+                <div class="row">
+                  <label>Date/Time</label>
+                  <input type="text" placeholder="Enter date and time of gig" required ng-model="setList.data.date" />
+                </div>
+                <div class="row">
+                  <button id="saveGig" type="submit">Save</a>
+                </div>
+              </form>
+              <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+            

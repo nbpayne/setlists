@@ -1,0 +1,54 @@
+        <div class="row">
+        
+          <!-- Set List -->
+          <section id="set-list" class="small-12 medium-8 columns">
+
+            <div class="alert-box warning" ng-show="offline">
+              This is a warning alert that is rounded.
+              <a href="#" class="close">&times;</a>
+            </div>
+
+            <h1>
+              {{ setList.data.venue }}
+              <small>{{ setList.data.date | date:'d/MM/yyyy h:mma' }}</small><i class="fi-page-edit action-icon" ng-click="editSetList()"></i>
+            </h1>
+            <ol id="setListSongs">
+              <li ng-repeat="song in setList.data.songs track by $index" ng-drop="true" ng-drop-success="onDropComplete($index, $data,$event)">
+                <div class="icons">
+                  <i class="fi-x action-icon" ng-click="removeSong()"></i>
+                </div>
+                <div ng-drag="true" ng-drag-data="song">
+                  {{ song.name }}
+                </div>
+              </li>
+            </ol>
+            
+          </section>
+
+          <!-- Song List -->
+          <section id="song-list" class="small-12 medium-4 columns">
+
+            <div class="panel">
+              <h1>Songs</h1>
+              <form ng-submit="addNewSong()">
+                <label>Search/New</label>
+                <input type="text" placeholder="Type song name" ng-model="search" />
+              </form>
+              <ul class="no-bullet">
+                <li ng-repeat="song in songList.data.songs | filter: search | orderBy: 'name'">
+                  <span ng-hide="song.edit">{{ song.name }}</span> 
+                  <form class="inline-form" ng-submit="saveSong()">
+                    <input type="text" ng-model="song.name" ng-show="song.edit" />
+                  </form>
+                  <div class="icons">
+                    <i class="fi-plus action-icon" ng-click="addSong()"></i> 
+                    <i class="fi-page-edit action-icon" ng-click="editSong()"></i> 
+                    <!--<i class="fi-trash action-icon" ng-click="deleteSong()"></i>-->
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+
+        </div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Set Lists</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body id="app" ng-app="SetListApp" ng-controller="IndexCtrl">
+  
+    <!-- Facebook -->
+    <div id="fb-root"></div>
+
+    <!-- Navigation -->
+    <header class="contain-to-grid hide-for-print">
+      <nav class="top-bar" data-topbar>
+        
+        <!-- Title -->
+        <ul class="title-area">
+          <li class="name">
+            <h1><a ui-sref="set-lists">My Set Lists <small>beta ({{ version }})</small></a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <!-- Right -->
+        <section class="top-bar-section">
+          <ul class="right">
+            <li><a ui-sref="login">{{ user }}</a></li>
+          </ul>
+        </section>
+
+      </nav>
+    </header>
+
+    <!-- Set List App -->
+    <div ui-view></div>
+
+    <!-- Misc -->
+    <script src="lib/objectid.js"></script>
+    
+    <!-- Angular -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/ngFacebook/dev/src/unmin/ngFacebook.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
+    <script src="bower_components/ngDraggable/ngDraggable.js"></script>
+    <script src="config/config.js"></script>
+    <script src="app/set-list-app.js"></script>
+    <script src="filters/future-filter.js"></script>
+    <script src="filters/past-filter.js"></script>
+    <script src="services/authorization-resource.js"></script>
+    <script src="services/set-list-resource.js"></script>
+    <script src="services/song-list-resource.js"></script>
+    <script src="services/user-service.js"></script>
+    <script src="services/synchronisation-service.js"></script>
+    <script src="services/set-list-service.js"></script>
+    <script src="services/song-list-service.js"></script>
+    <script src="components/_index/index-controller.js"></script>
+    <script src="components/login/login-controller.js"></script>
+    <script src="components/set-lists/set-lists-controller.js"></script>
+    <script src="components/set-list-modal/set-list-modal-controller.js"></script>
+    <script src="components/set-list/set-list-controller.js"></script>
+
+  </body>
+</html>
