@@ -1,70 +1,17 @@
-<!DOCTYPE html>
-<html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Set Lists</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
-  </head>
-  <body id="app" ng-app="SetListApp" ng-controller="IndexCtrl">
-  
-    <!-- Facebook -->
-    <div id="fb-root"></div>
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/main.3c52466a.css">  <body ng-app="SetListApp" ng-controller="Index as vm"> <div class="header"> <div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <div class="container"> <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" ui-sref="set-lists">Set Lists <small>beta ({{ vm.version }})</small></a> </div> <div class="collapse navbar-collapse" id="js-navbar-collapse"> <!--
+            <ul class="nav navbar-nav navbar-right" ng-if="vm.user.isLoggedIn">
+              <li class="active"><a href="#/" ng-click="vm.logout()">Logout</a></li>
+              <li><a ng-href="#/">About</a></li>
+              <li><a ng-href="#/">Contact</a></li>
+            </ul>
+            --> </div> </div> </div> </div> <div class="container"> <div ui-view></div> </div> <div class="footer"> <div class="container"> <p>&copy; 2014-15 Nick Payne &ndash; {{ vm.location }}</p> </div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <!--
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <!-- Navigation -->
-    <header class="contain-to-grid hide-for-print">
-      <nav class="top-bar" data-topbar>
-        
-        <!-- Title -->
-        <ul class="title-area">
-          <li class="name">
-            <h1><a ui-sref="set-lists">My Set Lists <small>beta ({{ version }})</small></a></h1>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-
-        <!-- Right -->
-        <section class="top-bar-section">
-          <ul class="right">
-            <li><a ui-sref="login">{{ user }}</a></li>
-          </ul>
-        </section>
-
-      </nav>
-    </header>
-
-    <!-- Set List App -->
-    <div ui-view></div>
-
-    <!-- Misc -->
-    <script src="lib/objectid.js"></script>
-    
-    <!-- Angular -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/ngFacebook/dev/src/unmin/ngFacebook.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
-    <script src="bower_components/ngDraggable/ngDraggable.js"></script>
-    <script src="config/config.js"></script>
-    <script src="app/set-list-app.js"></script>
-    <script src="filters/future-filter.js"></script>
-    <script src="filters/past-filter.js"></script>
-    <script src="services/authorization-resource.js"></script>
-    <script src="services/set-list-resource.js"></script>
-    <script src="services/song-list-resource.js"></script>
-    <script src="services/user-service.js"></script>
-    <script src="services/synchronisation-service.js"></script>
-    <script src="services/set-list-service.js"></script>
-    <script src="services/song-list-service.js"></script>
-    <script src="components/index/index-controller.js"></script>
-    <script src="components/login/login-controller.js"></script>
-    <script src="components/set-lists/set-lists-controller.js"></script>
-    <script src="components/set-list-modal/set-list-modal-controller.js"></script>
-    <script src="components/set-list/set-list-controller.js"></script>
-
-  </body>
-</html>
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+    --> <script src="scripts/vendor.f11fba56.js"></script> <script src="components/config/config.js"></script> <script src="scripts/scripts.24a08a5f.js"></script>  
