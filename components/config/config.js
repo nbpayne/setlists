@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('SetListApp.config', [])
-    .constant('API', 'https://set-lists-api-1224.appspot.com')
+    .constant('API', 'https://set-lists-api-1224.appspot-preview.com')
     .constant('BASE_URL', 'http://nbpayne.github.io/setlists/#')
     .constant('ENV', 'production')
     .constant('FB_APPID', '426184434182003')
